@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import {
   ArrowRight,
   ChevronDown,
@@ -9,10 +9,11 @@ import {
   X,
 } from 'lucide-react';
 import { AnimatePresence, motion } from 'motion/react';
-import logoBasic from '../assets/logo-basic.webp';
+import logoBacic from '../assets/logo-basic.webp';
+import draBacic from '../assets/sobre.jpg';
 
 const WHATSAPP_LINK =
-  'https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Basic%20Odontologia%20Integrada.';
+  'https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada.';
 const MAPS_LINK = 'https://share.google/8kPXRKlmD2nJsAAjK';
 const INSTAGRAM_LINK = 'https://instagram.com/bacic.odontologia';
 
@@ -88,7 +89,7 @@ const differentials = [
 
 const faqs = [
   {
-    q: 'A Basic Odontologia Integrada fica perto da Avenida Paulista?',
+    q: 'A Bacic Odontologia Integrada fica perto da Avenida Paulista?',
     a: 'Sim. A clínica está localizada na Rua Luís Coelho, 308, na Consolação, a poucos minutos a pé da Avenida Paulista e do metrô Consolação.',
   },
   {
@@ -117,13 +118,13 @@ function BrandLogo({ compact = false }: { compact?: boolean }) {
   return (
     <div className="flex items-center gap-3">
       <img
-        src={logoBasic}
-        alt="Basic Odontologia Integrada"
+        src={logoBacic}
+        alt="Bacic Odontologia Integrada"
         className={compact ? 'h-10 w-auto object-contain' : 'h-12 w-auto object-contain'}
       />
       {!compact && (
         <div className="flex flex-col">
-          <span className="text-lg font-serif tracking-tight leading-5">Basic</span>
+          <span className="text-lg font-serif tracking-tight leading-5">Bacic</span>
           <span className="text-[10px] tracking-[0.28em] font-semibold uppercase text-basic-muted">
             Odontologia Integrada
           </span>
@@ -251,8 +252,8 @@ export default function App() {
             >
               <div className="mb-10 flex justify-center">
                 <img
-                  src={logoBasic}
-                  alt="Logo Basic Odontologia Integrada"
+                  src={logoBacic}
+                  alt="Logo Bacic Odontologia Integrada"
                   className="h-20 w-auto object-contain md:h-24"
                 />
               </div>
@@ -302,13 +303,28 @@ export default function App() {
                 </h2>
               </div>
               <p className="mb-2 text-lg font-light leading-relaxed text-basic-navy-muted">
-                Da prevenção aos tratamentos restauradores, a Basic reúne diferentes áreas da
+                Da prevenção aos tratamentos restauradores, a Bacic reúne diferentes áreas da
                 odontologia para orientar cada paciente de forma individualizada.
               </p>
             </header>
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-              {services.map((service) => (
+              {[
+                'Profilaxia e prevenção',
+                'Periodontia',
+                'Dentística restauradora',
+                'Clareamento dental',
+                'Prótese',
+                'Odontologia domiciliar',
+                'Endodontia',
+                'Cirurgia',
+                'Implantodontia',
+                'Harmonização orofacial',
+              ].map((title) => {
+                const service = services.find((item) => item.title === title);
+                if (!service) return null;
+
+                return (
                 <motion.div
                   key={service.title}
                   whileHover={{
@@ -330,7 +346,8 @@ export default function App() {
                     <div className="h-1 w-1 rounded-full bg-basic-navy" />
                   </div>
                 </motion.div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="mt-20 text-center">
@@ -357,8 +374,8 @@ export default function App() {
               <div className="relative">
                 <div className="relative aspect-square overflow-hidden rounded-[2.5rem] bg-gray-200 shadow-2xl lg:aspect-[4/5]">
                   <img
-                    src="https://images.unsplash.com/photo-1629909613654-2871b886759c?auto=format&fit=crop&w=1200&q=80"
-                    alt="Atendimento humanizado na Basic"
+                    src={draBacic}
+                    alt="Atendimento humanizado na Bacic"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
                   <div className="absolute inset-0 bg-basic-navy/5" />
@@ -382,7 +399,7 @@ export default function App() {
               </h2>
               <p className="mb-12 text-lg font-light leading-relaxed text-basic-navy-muted lg:text-xl">
                 A odontologia integrada permite olhar para a saúde bucal de forma mais completa.
-                Na Basic, a avaliação considera suas queixas, sua rotina, sua saúde geral e as
+                Na Bacic, a avaliação considera suas queixas, sua rotina, sua saúde geral e as
                 reais possibilidades de sucesso clínico.
               </p>
 
@@ -425,12 +442,12 @@ export default function App() {
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-16 px-6 lg:grid-cols-12 lg:items-center lg:px-12">
             <div className="lg:col-span-7">
               <h2 className="mb-12 text-5xl font-serif text-basic-navy-elegant lg:text-7xl">
-                Basic
+                Bacic
               </h2>
               <div className="space-y-8 text-lg font-light leading-relaxed text-basic-navy-muted">
                 <p>
                   Localizada estrategicamente na <span className="font-medium text-basic-navy">Consolação</span>,
-                  a apenas um quarteirão da Avenida Paulista, a Basic Odontologia Integrada foi
+                  a apenas um quarteirão da Avenida Paulista, a Bacic Odontologia Integrada foi
                   idealizada para resgatar a essência do atendimento próximo.
                 </p>
                 <p>
@@ -468,7 +485,7 @@ export default function App() {
             <div className="group relative lg:col-span-5">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[3rem] border border-gray-100 shadow-sm transition-transform duration-700 group-hover:-translate-y-2">
                 <img
-                  src="https://images.unsplash.com/photo-1445510866646-76ea4f732496?auto=format&fit=crop&w=1200&q=80"
+                  src={draBacic}
                   alt="Consultório acolhedor na Consolação"
                   className="absolute inset-0 h-full w-full scale-110 object-cover transition-transform duration-1000 group-hover:scale-100"
                 />
@@ -566,7 +583,7 @@ export default function App() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="grayscale saturate-50 transition-all duration-1000 hover:grayscale-0"
-                  title="Localização Basic Odontologia"
+                  title="Localização Bacic Odontologia"
                 />
                 <div className="pointer-events-none absolute left-6 top-6 flex items-center gap-2 rounded-full bg-white/90 px-4 py-2 shadow-lg backdrop-blur">
                   <div className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
@@ -637,7 +654,7 @@ export default function App() {
                 Cuide do seu sorriso com quem valoriza critério e humanização
               </h2>
               <p className="mx-auto mb-16 max-w-2xl text-lg font-light leading-relaxed text-basic-navy-muted lg:text-xl">
-                Agende sua avaliação na <span className="font-medium text-basic-navy">Basic Odontologia Integrada</span> e receba um atendimento ético e especializado no coração de São Paulo.
+                Agende sua avaliação na <span className="font-medium text-basic-navy">Bacic Odontologia Integrada</span> e receba um atendimento ético e especializado no coração de São Paulo.
               </p>
               <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
                 <a
@@ -834,3 +851,4 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
     </div>
   );
 }
+
