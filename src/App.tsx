@@ -366,7 +366,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-basic-offwhite py-32">
+        <section id="metodologia" className="relative overflow-hidden bg-basic-offwhite py-32">
           <div className="absolute right-0 top-0 h-[500px] w-[500px] translate-x-1/2 -translate-y-1/2 rounded-full border border-basic-navy/5" />
 
           <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-24 px-6 lg:grid-cols-2 lg:px-12">
@@ -497,7 +497,7 @@ export default function App() {
           </div>
         </section>
 
-        <section className="relative overflow-hidden bg-basic-navy-elegant py-32 text-white">
+        <section id="diferenciais" className="relative overflow-hidden bg-basic-navy-elegant py-32 text-white">
           <div className="pointer-events-none absolute -left-24 -top-24 h-96 w-96 rounded-full border border-white/5" />
 
           <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
@@ -851,4 +851,3 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
     </div>
   );
 }
-
