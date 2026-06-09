@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Bacic Odontologia Integrada: atendimento odontológico ético, humanizado e próximo à Avenida Paulista."
+      content="Dentista na Consolação, próximo à Av. Paulista. Atendimento odontológico particular com avaliação cuidadosa na Bacic Odontologia Integrada."
     />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
     <title>Bacic Odontologia Integrada</title>
@@ -224,6 +224,198 @@
         gap: 42px;
         align-items: end;
         margin-bottom: 54px;
+      }
+
+      .quick-benefits,
+      .need-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .quick-benefits {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .benefit-item,
+      .need-item,
+      .review-panel {
+        border: 1px solid rgba(16, 24, 50, 0.08);
+        border-radius: 28px;
+        background: var(--basic-white);
+      }
+
+      .benefit-item {
+        padding: 26px;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.35rem;
+        font-weight: 600;
+        line-height: 1.18;
+      }
+
+      .need-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+      }
+
+      .need-item {
+        padding: 18px 20px;
+        color: var(--basic-navy-muted);
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .review-panel {
+        display: grid;
+        gap: 18px;
+        padding: 36px;
+      }
+
+      .review-panel strong {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.8rem;
+      }
+
+      .review-header {
+        text-align: center;
+      }
+
+      .review-carousel {
+        position: relative;
+        overflow: hidden;
+        --review-visible: 3;
+      }
+
+      .review-track {
+        display: flex;
+        align-items: stretch;
+        transition: transform 0.35s ease;
+      }
+
+      .review-slide {
+        display: flex;
+        min-width: calc(100% / var(--review-visible));
+        padding: 6px;
+      }
+
+      .review-card {
+        display: grid;
+        gap: 16px;
+        grid-template-rows: auto auto 1fr;
+        width: 100%;
+        min-height: 430px;
+        padding: 28px;
+        border: 1px solid rgba(16, 24, 50, 0.08);
+        border-radius: 24px;
+        background: var(--basic-offwhite);
+        text-align: left;
+      }
+
+      .review-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .review-avatar {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 999px;
+        background: var(--basic-navy);
+        color: var(--basic-white);
+        font-family: "Outfit", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .review-author h3 {
+        margin: 0 0 4px;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.18rem;
+      }
+
+      .review-author span {
+        color: var(--basic-muted);
+        font-size: 0.9rem;
+      }
+
+      .review-stars {
+        color: #f6b300;
+        font-size: 1.08rem;
+        letter-spacing: 0.05em;
+      }
+
+      .review-card p {
+        margin: 0;
+        color: var(--basic-navy-muted);
+        font-size: 1.02rem;
+        line-height: 1.8;
+      }
+
+      .review-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 6px;
+      }
+
+      .review-button {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--basic-navy);
+        color: var(--basic-white);
+        font-size: 1.35rem;
+        cursor: pointer;
+      }
+
+      .review-dots {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .review-dot {
+        width: 9px;
+        height: 9px;
+        border: 0;
+        border-radius: 999px;
+        background: rgba(16, 24, 50, 0.22);
+        cursor: pointer;
+      }
+
+      .review-dot.active {
+        width: 24px;
+        background: var(--basic-navy);
+      }
+
+      .inline-cta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 34px;
+        padding: 30px;
+        border-radius: 32px;
+        background: var(--basic-white);
+        border: 1px solid rgba(16, 24, 50, 0.08);
+      }
+
+      .inline-cta h3 {
+        margin: 0 0 8px;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.7rem;
+      }
+
+      .inline-cta p {
+        margin: 0;
+        color: var(--basic-navy-muted);
+        line-height: 1.7;
       }
 
       .service-grid,
@@ -524,139 +716,6 @@
         display: block;
       }
 
-      .review-panel {
-        display: grid;
-        gap: 18px;
-        padding: 36px;
-        border: 1px solid rgba(16, 24, 50, 0.08);
-        border-radius: 28px;
-        background: var(--basic-white);
-      }
-
-      .review-panel strong {
-        font-family: "Outfit", sans-serif;
-        font-size: 1.8rem;
-      }
-
-      .review-header {
-        text-align: center;
-      }
-
-      .review-carousel {
-        position: relative;
-        overflow: hidden;
-        --review-visible: 3;
-      }
-
-      .review-track {
-        display: flex;
-        align-items: stretch;
-        transition: transform 0.35s ease;
-      }
-
-      .review-slide {
-        display: flex;
-        min-width: calc(100% / var(--review-visible));
-        padding: 6px;
-      }
-
-      .review-card {
-        display: grid;
-        gap: 16px;
-        grid-template-rows: auto auto 1fr;
-        width: 100%;
-        min-height: 430px;
-        padding: 28px;
-        border: 1px solid rgba(16, 24, 50, 0.08);
-        border-radius: 24px;
-        background: var(--basic-offwhite);
-        text-align: left;
-      }
-
-      .review-author {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .review-avatar {
-        display: grid;
-        place-items: center;
-        width: 48px;
-        height: 48px;
-        border-radius: 999px;
-        background: var(--basic-navy);
-        color: var(--basic-white);
-        font-family: "Outfit", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 700;
-      }
-
-      .review-author h3 {
-        margin: 0 0 4px;
-        font-family: "Outfit", sans-serif;
-        font-size: 1.18rem;
-      }
-
-      .review-author span {
-        color: var(--basic-muted);
-        font-size: 0.9rem;
-      }
-
-      .review-stars {
-        color: #f6b300;
-        font-size: 1.08rem;
-        letter-spacing: 0.05em;
-      }
-
-      .review-card p {
-        margin: 0;
-        color: var(--basic-navy-muted);
-        font-size: 1.02rem;
-        line-height: 1.8;
-      }
-
-      .review-controls {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        margin-top: 6px;
-      }
-
-      .review-button {
-        display: grid;
-        place-items: center;
-        width: 44px;
-        height: 44px;
-        border: 0;
-        border-radius: 999px;
-        background: var(--basic-navy);
-        color: var(--basic-white);
-        font-size: 1.35rem;
-        cursor: pointer;
-      }
-
-      .review-dots {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .review-dot {
-        width: 9px;
-        height: 9px;
-        border: 0;
-        border-radius: 999px;
-        background: rgba(16, 24, 50, 0.22);
-        cursor: pointer;
-      }
-
-      .review-dot.active {
-        width: 24px;
-        background: var(--basic-navy);
-      }
-
       .cta-panel {
         display: flex;
         flex-wrap: wrap;
@@ -824,7 +883,15 @@
           url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' d='M19.11 17.21c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.34-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.41.12-.54.12-.12.27-.31.41-.47.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.47-.07-.14-.61-1.47-.84-2.02-.22-.52-.44-.45-.61-.46h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27 0 1.34.97 2.63 1.11 2.81.14.18 1.91 2.91 4.63 4.08.65.28 1.15.45 1.54.58.65.21 1.25.18 1.72.11.52-.08 1.59-.65 1.82-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32Z'/%3E%3Cpath fill='%23fff' d='M16.02 3.2c-6.93 0-12.56 5.62-12.56 12.54 0 2.21.58 4.36 1.68 6.26L3.2 28.8l6.98-1.83a12.57 12.57 0 0 0 5.84 1.48h.01c6.92 0 12.55-5.62 12.55-12.54 0-3.35-1.3-6.5-3.67-8.87A12.45 12.45 0 0 0 16.02 3.2Zm0 22.99h-.01a10.4 10.4 0 0 1-5.3-1.45l-.38-.22-4.14 1.09 1.11-4.03-.25-.41a10.28 10.28 0 0 1-1.58-5.43c0-5.68 4.63-10.3 10.33-10.3 2.75 0 5.33 1.07 7.28 3.02a10.23 10.23 0 0 1 3.02 7.28c0 5.68-4.63 10.3-10.32 10.3Z'/%3E%3C/svg%3E");
       }
 
+      .floating-label {
+        display: none;
+      }
+
       @media (max-width: 1080px) {
+        .need-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
         .service-grid {
           grid-template-columns: repeat(3, minmax(0, 1fr));
         }
@@ -832,10 +899,6 @@
         .differentials-grid,
         .footer-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .review-carousel {
-          --review-visible: 2;
         }
       }
 
@@ -849,8 +912,16 @@
           grid-template-columns: 1fr;
         }
 
+        .quick-benefits {
+          grid-template-columns: 1fr;
+        }
+
         .service-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .review-carousel {
+          --review-visible: 2;
         }
 
         .section {
@@ -865,6 +936,14 @@
         .contact-box {
           padding: 28px;
         }
+
+        #sobre .image-card {
+          order: -1;
+        }
+
+        #localizacao .map-frame {
+          order: -1;
+        }
       }
 
       @media (max-width: 560px) {
@@ -878,8 +957,17 @@
             url("./assets/hero.jpg") calc(62% - 200px) center / cover no-repeat;
         }
 
-        .service-grid {
+        .service-grid,
+        .need-grid {
           grid-template-columns: 1fr;
+        }
+
+        .review-carousel {
+          --review-visible: 1;
+        }
+
+        .review-card {
+          min-height: 360px;
         }
 
         #tratamentos {
@@ -904,15 +992,6 @@
           padding-bottom: 22px !important;
         }
 
-        .review-carousel {
-          --review-visible: 1;
-        }
-
-        .review-card {
-          min-height: auto;
-          padding: 24px;
-        }
-
         .cta-panel {
           padding: 24px;
         }
@@ -929,7 +1008,8 @@
 
         .hero-actions,
         .button-row,
-        .doctor-card {
+        .doctor-card,
+        .inline-cta {
           align-items: stretch;
         }
 
@@ -951,11 +1031,21 @@
         }
 
         .floating-whatsapp {
-          width: 60px;
+          width: auto;
           height: 60px;
           right: 14px;
           bottom: 14px;
           left: auto;
+          gap: 10px;
+          padding: 0 18px;
+          font-size: 0.75rem;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+
+        .floating-label {
+          display: inline;
         }
 
         .footer,
@@ -995,11 +1085,12 @@
         <div class="container hero-grid">
           <img class="hero-logo" src="./assets/logo-basic.webp" alt="Logo Bacic Odontologia" />
           <h1 class="title">
-            Cuidado, critério <br />
-            <em>e humanização</em>
+            Dentista na Consolação, <br />
+            <em>próximo à Av. Paulista</em>
           </h1>
           <p class="text-lg">
-            Atendimento odontológico próximo à Avenida Paulista.
+            Atendimento odontológico na Rua Luís Coelho, a poucos minutos da Av. Paulista.
+            Agende sua avaliação pelo WhatsApp.
           </p>
           <div class="hero-actions">
             <a
@@ -1008,136 +1099,236 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              Agendar avaliação
+              Agendar avaliação pelo WhatsApp
             </a>
           </div>
         </div>
       </section>
 
-      <section class="section" id="tratamentos" style="padding-top: 88px">
+      <section class="section" id="beneficios" style="padding-bottom: 0">
+        <div class="container">
+          <div class="quick-benefits">
+            <div class="benefit-item">✓ Próximo à Av. Paulista</div>
+            <div class="benefit-item">✓ Atendimento particular</div>
+            <div class="benefit-item">✓ Clínica geral e especialidades</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="quando-procurar">
         <div class="container">
           <div class="split-header">
             <div>
-              <p class="eyebrow">Nossa atuação</p>
-              <h2 class="title">Cuidados completos para diferentes necessidades</h2>
+              <p class="eyebrow">Quando procurar a clínica</p>
+              <h2 class="title">Sinais e necessidades que merecem atenção</h2>
             </div>
             <p class="text-lg">
-              Da prevenção aos tratamentos restauradores, a Bacic Odontologia reúne diferentes áreas da
-              odontologia para orientar cada paciente de forma individualizada.
+              Está há muito tempo sem ir ao dentista, precisa de uma limpeza ou sente dor,
+              incômodo e sensibilidade? A avaliação profissional ajuda a entender a causa e definir
+              o melhor caminho.
             </p>
           </div>
 
-                    <div class="service-grid">
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/010-smile.svg"
-                  alt="Ícone de sorriso"
-                />
-                <h3>Profilaxia e prevenção</h3>
-                <p>Cuidados essenciais para manter a saúde bucal em dia e acompanhamento constante.</p>
+          <div class="need-grid">
+            <div class="need-item">Dor de dente</div>
+            <div class="need-item">Limpeza</div>
+            <div class="need-item">Restauração</div>
+            <div class="need-item">Avaliação</div>
+            <div class="need-item">Gengiva</div>
+            <div class="need-item">Canal</div>
+            <div class="need-item">Dente quebrado</div>
+            <div class="need-item">Sensibilidade</div>
+            <div class="need-item">Mau hálito</div>
+            <div class="need-item">Prótese</div>
+            <div class="need-item">Implante</div>
+            <div class="need-item">Prevenção</div>
+          </div>
+
+          <div class="inline-cta">
+            <div>
+              <h3>Fale pelo WhatsApp e conte o que você precisa avaliar.</h3>
+              <p>A equipe orienta o agendamento e o melhor próximo passo para o seu caso.</p>
+            </div>
+            <a
+              class="btn btn-primary sellbot-wpp-open"
+              href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Quero agendar minha avaliação
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section method-section" id="metodologia">
+        <div class="container method-grid">
+          <div class="image-card tall">
+            <img
+              src="./assets/metodologia.jpg"
+              alt="Atendimento humanizado na Bacic"
+            />
+            <div class="badge">Clínica certificada e ética</div>
+          </div>
+
+          <div>
+            <p class="eyebrow">Metodologia</p>
+            <h2 class="title">Antes de tratar, avaliamos com cuidado</h2>
+            <p class="text-lg" style="margin-top: 24px">
+              A primeira consulta é conduzida com escuta, exame clínico e orientação transparente.
+              A partir desse entendimento, indicamos apenas o que faz sentido para sua necessidade,
+              seu momento e sua saúde bucal.
+            </p>
+
+            <div class="method-steps" style="margin-top: 36px">
+              <div class="method-step">
+                <div class="method-step-number">01</div>
+                <div>
+                  <h3>Escuta da queixa</h3>
+                  <p>Tempo para entender dor, urgência, histórico, expectativa e prioridades.</p>
+                </div>
               </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/009-lips.svg"
-                  alt="Ícone de periodontia"
-                />
-                <h3>Periodontia</h3>
-                <p>Prevenção e tratamento das estruturas de suporte e da saúde periodontal.</p>
+              <div class="method-step">
+                <div class="method-step-number">02</div>
+                <div>
+                  <h3>Exame e diagnóstico</h3>
+                  <p>Avaliação clínica criteriosa para identificar causas e possibilidades de tratamento.</p>
+                </div>
               </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/005-broken-tooth.svg"
-                  alt="Ícone de dentística restauradora"
-                />
-                <h3>Dentística restauradora</h3>
-                <p>Restaurações para recuperar função, conforto e estética natural.</p>
+              <div class="method-step">
+                <div class="method-step-number">03</div>
+                <div>
+                  <h3>Plano responsável</h3>
+                  <p>Explicações claras, conduta ética e sequência de cuidado definida com o paciente.</p>
+                </div>
               </div>
-            </article>
-            <article class="service-card">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sobre" style="padding-bottom: 88px">
+        <div class="container about-grid">
+          <div>
+            <h2 class="title">Dra. Noedja Bacic</h2>
+            <div class="about-copy" style="margin-top: 28px">
+              <p>
+                A <strong>Dra. Noedja Bacic</strong> é a responsável técnica pela Bacic Odontologia
+                Integrada, conduzindo os atendimentos com olhar clínico, acolhimento e respeito ao
+                tempo de cada paciente.
+              </p>
+              <p>
+                Seu perfil une técnica e cuidado humanizado: antes de propor qualquer tratamento,
+                busca compreender a queixa, explicar as opções e orientar decisões com segurança.
+              </p>
+              <p>
+                Na clínica, cada indicação é baseada em critério profissional, ética odontológica e
+                visão integrada da saúde bucal.
+              </p>
+            </div>
+
+            <div class="doctor-card">
               <div>
-                <img
-                  class="service-icon"
-                  src="./assets/008-white-teeth.svg"
-                  alt="Ícone de clareamento dental"
-                />
-                <h3>Clareamento dental</h3>
-                <p>Procedimento indicado após avaliação criteriosa da saúde de dentes e gengivas.</p>
+                <h3>Dra. Noedja Bacic</h3>
+                <span>CRO 157183 • Responsável técnica</span>
               </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/0151-denture.svg"
-                  alt="Ícone de prótese"
-                />
-                <h3>Prótese</h3>
-                <p>Reabilitação total ou parcial para devolver segurança ao sorrir e mastigar.</p>
+              <a
+                class="btn btn-primary sellbot-wpp-open"
+                href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chamar no WhatsApp
+              </a>
+            </div>
+
+          </div>
+
+          <div class="image-card tall">
+            <img
+              src="./assets/sobre.jpg"
+              alt="Dra. Noedja Bacic"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="section differentials" id="diferenciais">
+        <div class="container">
+          <p class="eyebrow">Diferenciais</p>
+          <h2 class="title">Cuidado profissional com critério em cada etapa</h2>
+
+          <div class="differentials-grid">
+            <div class="differential">
+              <h3>Localização estratégica</h3>
+              <p>A poucos passos da Av. Paulista, em região central, segura e de fácil acesso.</p>
+            </div>
+            <div class="differential">
+              <h3>Ética odontológica</h3>
+              <p>Indicações pautadas em necessidade real, transparência e responsabilidade clínica.</p>
+            </div>
+            <div class="differential">
+              <h3>Visão integrada</h3>
+              <p>Diferentes especialidades reunidas sob a mesma filosofia de cuidado.</p>
+            </div>
+            <div class="differential">
+              <h3>Cuidado humanizado</h3>
+              <p>Escuta ativa, linguagem simples e atendimento conduzido com calma.</p>
+            </div>
+            <div class="differential">
+              <h3>Atendimento particular</h3>
+              <p>Tempo de consulta e planejamento compatíveis com uma avaliação cuidadosa.</p>
+            </div>
+            <div class="differential">
+              <h3>Biossegurança e conforto</h3>
+              <p>Ambiente preparado com rigor técnico para transmitir tranquilidade.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="localizacao" style="padding-top: 88px">
+        <div class="container location-grid">
+          <div>
+            <p class="eyebrow">São Paulo • Consolação</p>
+            <h2 class="title">Rua Luís Coelho, próximo à Av. Paulista</h2>
+            <p class="text-lg" style="margin-top: 24px">
+              A Bacic Odontologia fica na Consolação, em uma região de fácil acesso para quem
+              trabalha, estuda ou circula pela Avenida Paulista.
+              Ideal para quem mora, trabalha ou passa pela Paulista, Consolação, Bela Vista e
+              Centro de São Paulo.
+            </p>
+
+            <div class="contact-box" style="margin-top: 8px">
+              <div class="contact-address">
+                <strong>Rua Luís Coelho, 308</strong>
+                <p>Consolação, São Paulo/SP</p>
+                <div class="contact-chip">Próximo ao metrô Consolação e à Av. Paulista</div>
               </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/022-tooth-3.svg"
-                  alt="Ícone de odontologia domiciliar"
-                />
-                <h3>Odontologia domiciliar</h3>
-                <p>Atendimento humanizado para quem necessita de cuidados fora do consultório.</p>
+
+              <div class="button-row">
+                <a
+                  class="btn btn-primary"
+                  href="https://google.com/maps/place/Bacic+Odontologia+Integrada/data=!4m2!3m1!1s0x0:0x2b953aa0f920be20?sa=X&ved=1t:2428&ictx=111"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver rota no Maps
+                </a>
+                <a
+                  class="btn btn-secondary sellbot-wpp-open"
+                  href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Agendar via WhatsApp
+                </a>
               </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/030-tooth-2.svg"
-                  alt="Ícone de endodontia"
-                />
-                <h3>Endodontia</h3>
-                <p>Tratamento de canal focado no alívio da dor e preservação dental.</p>
-              </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/028-dentist.svg"
-                  alt="Ícone de cirurgia"
-                />
-                <h3>Cirurgia</h3>
-                <p>Procedimentos clínicos com planejamento, biossegurança e condução cuidadosa.</p>
-              </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/007-prosthesis.svg"
-                  alt="Ícone de implantodontia"
-                />
-                <h3>Implantodontia</h3>
-                <p>Reposição dentária moderna com técnicas consolidadas e planejamento individual.</p>
-              </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/015-doctor-3.svg"
-                  alt="Ícone de harmonização orofacial"
-                />
-                <h3>Harmonização orofacial</h3>
-                <p>Busca pelo equilíbrio facial com indicação técnica, clínica e responsável.</p>
-              </div>
-            </article>
+            </div>
+          </div>
+
+          <div class="map-frame">
+            <img src="./assets/localizacao.jpg" alt="Localização Bacic Odontologia" />
           </div>
         </div>
       </section>
@@ -1319,192 +1510,21 @@
         </div>
       </section>
 
-      <section class="section method-section" id="metodologia">
-        <div class="container method-grid">
-          <div class="image-card tall">
-            <img
-              src="./assets/metodologia.jpg"
-              alt="Atendimento humanizado na Bacic"
-            />
-            <div class="badge">Clínica certificada e ética</div>
-          </div>
-
-          <div>
-            <p class="eyebrow">Metodologia</p>
-            <h2 class="title">Antes de indicar um tratamento, entendemos você</h2>
-            <p class="text-lg" style="margin-top: 24px">
-              A odontologia integrada permite olhar para a saúde bucal de forma mais completa.
-              Na Bacic, a avaliação considera suas queixas, sua rotina, sua saúde geral e as
-              reais possibilidades de sucesso clínico.
-            </p>
-
-            <div class="method-steps" style="margin-top: 36px">
-              <div class="method-step">
-                <div class="method-step-number">01</div>
-                <div>
-                  <h3>Avaliação atenta</h3>
-                  <p>Tempo para ouvir seu histórico, entender desconfortos e mapear prioridades.</p>
-                </div>
-              </div>
-              <div class="method-step">
-                <div class="method-step-number">02</div>
-                <div>
-                  <h3>Orientação clara</h3>
-                  <p>Explicações técnicas em linguagem simples, com transparência em cada etapa.</p>
-                </div>
-              </div>
-              <div class="method-step">
-                <div class="method-step-number">03</div>
-                <div>
-                  <h3>Cuidado contínuo</h3>
-                  <p>Plano de manutenção preventiva com foco em longevidade e bem-estar bucal.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="sobre" style="padding-bottom: 88px">
-        <div class="container about-grid">
-          <div>
-            <h2 class="title">Bacic Odontologia</h2>
-            <div class="about-copy" style="margin-top: 28px">
-              <p>
-                Localizada estrategicamente na <strong>Consolação</strong>, a apenas um quarteirão
-                da Avenida Paulista, a Bacic Odontologia Integrada foi idealizada para resgatar a
-                essência do atendimento próximo.
-              </p>
-              <p>
-                Sob a responsabilidade técnica da <strong>Dra. Noedja Bacic</strong>, cada
-                indicação é baseada em critério clínico sólido, ética odontológica e respeito ao
-                tempo do paciente.
-              </p>
-              <p>
-                Nossa estrutura foi pensada para oferecer um ambiente de calma e acolhimento,
-                contrapondo o ritmo acelerado da região da Paulista.
-              </p>
-            </div>
-
-            <div class="doctor-card">
-              <div>
-                <h3>Dra. Noedja Bacic</h3>
-                <span>CRO 157183 • Responsável técnica</span>
-              </div>
-              <a
-                class="btn btn-primary sellbot-wpp-open"
-                href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Chamar no WhatsApp
-              </a>
-            </div>
-          </div>
-
-          <div class="image-card tall">
-            <img
-              src="./assets/sobre.jpg"
-              alt="Dra. Noedja Bacic"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section class="section differentials" id="diferenciais">
-        <div class="container">
-          <p class="eyebrow">Diferenciais</p>
-          <h2 class="title">Excelência nos detalhes que fazem a diferença</h2>
-
-          <div class="differentials-grid">
-            <div class="differential">
-              <h3>Localização estratégica</h3>
-              <p>A poucos passos da Av. Paulista, em região central, segura e de fácil acesso.</p>
-            </div>
-            <div class="differential">
-              <h3>Atendimento próximo</h3>
-              <p>Uma abordagem cuidadosa, sem a pressa comum de grandes clínicas.</p>
-            </div>
-            <div class="differential">
-              <h3>Visão integrada</h3>
-              <p>Diferentes especialidades reunidas sob a mesma filosofia de cuidado.</p>
-            </div>
-            <div class="differential">
-              <h3>Foco na saúde</h3>
-              <p>Indicações pautadas em critério clínico, ética odontológica e necessidade real.</p>
-            </div>
-            <div class="differential">
-              <h3>Conveniência aos sábados</h3>
-              <p>Atendimento pensado para conciliar sua saúde com uma rotina corrida.</p>
-            </div>
-            <div class="differential">
-              <h3>Biossegurança e conforto</h3>
-              <p>Ambiente preparado com rigor técnico para transmitir tranquilidade.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="localizacao" style="padding-top: 88px">
-        <div class="container location-grid">
-          <div>
-            <p class="eyebrow">São Paulo • Consolação</p>
-            <h2 class="title">No coração da cidade, ao lado da Paulista</h2>
-            <p class="text-lg" style="margin-top: 24px">
-              Nossa localização na Rua Luís Coelho foi escolhida para facilitar o dia a dia de
-              quem reside, estuda ou trabalha nas imediações do maior centro financeiro da América
-              Latina.
-            </p>
-
-            <div class="contact-box" style="margin-top: 8px">
-              <div class="contact-address">
-                <strong>Rua Luís Coelho, 308</strong>
-                <p>Consolação, São Paulo/SP</p>
-                <div class="contact-chip">Próximo ao metrô Consolação e à Av. Paulista</div>
-              </div>
-
-              <div class="button-row">
-                <a
-                  class="btn btn-primary"
-                  href="https://google.com/maps/place/Bacic+Odontologia+Integrada/data=!4m2!3m1!1s0x0:0x2b953aa0f920be20?sa=X&ved=1t:2428&ictx=111"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Ver rota no Maps
-                </a>
-                <a
-                  class="btn btn-secondary sellbot-wpp-open"
-                  href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Agendar via WhatsApp
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="map-frame">
-            <img src="./assets/localizacao.jpg" alt="Localização Bacic Odontologia" />
-          </div>
-        </div>
-      </section>
-
       <section class="section cta-band">
         <div class="container">
           <div class="cta-panel">
             <div>
-              <h3>Deseja uma avaliação profissional?</h3>
-              <p>Nossa equipe está pronta para orientar o próximo passo para sua saúde bucal.</p>
+              <h3>Agende sua avaliação profissional</h3>
+              <p>Converse pelo WhatsApp e dê o próximo passo com orientação odontológica cuidadosa.</p>
             </div>
             <a
               class="btn sellbot-wpp-open"
-              style="background: var(--basic-blue-light); color: var(--basic-navy)"
+              style="background: var(--basic-white); color: var(--basic-navy)"
               href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
               target="_blank"
               rel="noopener noreferrer"
             >
-              Quero agendar agora
+              Agendar avaliação
             </a>
           </div>
         </div>
@@ -1531,24 +1551,45 @@
 
             <div class="faq-item">
               <button class="faq-question" type="button">
-                <span>Quais tratamentos a clínica oferece?</span>
+                <span>A clínica atende dor, limpeza, restauração e canal?</span>
                 <span class="faq-icon">⌄</span>
               </button>
               <div class="faq-answer">
-                A clínica atua com odontologia integrada, incluindo prevenção, estética,
-                reabilitação, implantes, canal, periodontia, cirurgias, atendimento domiciliar e
-                harmonização orofacial.
+                Sim. A avaliação identifica a causa da queixa e direciona o atendimento para
+                profilaxia, restauração, canal, gengiva, prótese, implante ou outro cuidado indicado.
               </div>
             </div>
 
             <div class="faq-item">
               <button class="faq-question" type="button">
-                <span>A clínica atende aos sábados?</span>
+                <span>O atendimento é particular?</span>
                 <span class="faq-icon">⌄</span>
               </button>
               <div class="faq-answer">
-                Sim. Os atendimentos aos sábados ajudam pacientes com agenda mais restrita durante
-                a semana, sempre com agendamento prévio.
+                Sim. A Bacic Odontologia realiza atendimento particular, com tempo dedicado para
+                avaliação, orientação e planejamento do tratamento.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>A clínica atende convênios?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                Atualmente, a Bacic Odontologia realiza atendimentos particulares. Pelo WhatsApp, a
+                equipe pode orientar sobre agendamento e formas de pagamento disponíveis.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Posso agendar pelo WhatsApp?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                Sim. O WhatsApp é o canal mais direto para falar com a equipe, tirar dúvidas iniciais
+                e agendar sua avaliação profissional.
               </div>
             </div>
 
@@ -1560,6 +1601,39 @@
               <div class="faq-answer">
                 Não. A avaliação inicial existe justamente para entender sua necessidade, realizar
                 o diagnóstico e indicar o plano mais adequado.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>A clínica atende aos sábados?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                Os horários podem variar conforme a agenda. Chame pelo WhatsApp para confirmar a
+                disponibilidade e encontrar o melhor horário para sua avaliação.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>A avaliação é indicada para quais casos?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                A avaliação é indicada para dor, limpeza, restaurações antigas, gengiva, canal,
+                perda dentária, prevenção ou qualquer dúvida sobre sua saúde bucal.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Como vejo avaliações reais da clínica?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                As avaliações públicas podem ser consultadas diretamente no perfil da Bacic
+                Odontologia Integrada no Google, quando disponíveis.
               </div>
             </div>
           </div>
@@ -1633,6 +1707,16 @@
         </div>
       </div>
     </footer>
+
+    <a
+      class="floating-whatsapp sellbot-wpp-open"
+      href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Agendar pelo WhatsApp"
+    >
+      <span class="floating-label">Agendar pelo WhatsApp</span>
+    </a>
 
     <script src="https://plugin.sellbot.tech/assets/js/sellbot_plugin.min.js"></script>
     <script>
