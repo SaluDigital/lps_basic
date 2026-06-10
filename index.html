@@ -524,6 +524,139 @@
         display: block;
       }
 
+      .review-panel {
+        display: grid;
+        gap: 18px;
+        padding: 36px;
+        border: 1px solid rgba(16, 24, 50, 0.08);
+        border-radius: 28px;
+        background: var(--basic-white);
+      }
+
+      .review-panel strong {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.8rem;
+      }
+
+      .review-header {
+        text-align: center;
+      }
+
+      .review-carousel {
+        position: relative;
+        overflow: hidden;
+        --review-visible: 3;
+      }
+
+      .review-track {
+        display: flex;
+        align-items: stretch;
+        transition: transform 0.35s ease;
+      }
+
+      .review-slide {
+        display: flex;
+        min-width: calc(100% / var(--review-visible));
+        padding: 6px;
+      }
+
+      .review-card {
+        display: grid;
+        gap: 16px;
+        grid-template-rows: auto auto 1fr;
+        width: 100%;
+        min-height: 430px;
+        padding: 28px;
+        border: 1px solid rgba(16, 24, 50, 0.08);
+        border-radius: 24px;
+        background: var(--basic-offwhite);
+        text-align: left;
+      }
+
+      .review-author {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .review-avatar {
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 999px;
+        background: var(--basic-navy);
+        color: var(--basic-white);
+        font-family: "Outfit", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+
+      .review-author h3 {
+        margin: 0 0 4px;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.18rem;
+      }
+
+      .review-author span {
+        color: var(--basic-muted);
+        font-size: 0.9rem;
+      }
+
+      .review-stars {
+        color: #f6b300;
+        font-size: 1.08rem;
+        letter-spacing: 0.05em;
+      }
+
+      .review-card p {
+        margin: 0;
+        color: var(--basic-navy-muted);
+        font-size: 1.02rem;
+        line-height: 1.8;
+      }
+
+      .review-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 6px;
+      }
+
+      .review-button {
+        display: grid;
+        place-items: center;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 999px;
+        background: var(--basic-navy);
+        color: var(--basic-white);
+        font-size: 1.35rem;
+        cursor: pointer;
+      }
+
+      .review-dots {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .review-dot {
+        width: 9px;
+        height: 9px;
+        border: 0;
+        border-radius: 999px;
+        background: rgba(16, 24, 50, 0.22);
+        cursor: pointer;
+      }
+
+      .review-dot.active {
+        width: 24px;
+        background: var(--basic-navy);
+      }
+
       .cta-panel {
         display: flex;
         flex-wrap: wrap;
@@ -700,6 +833,10 @@
         .footer-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
+
+        .review-carousel {
+          --review-visible: 2;
+        }
       }
 
       @media (max-width: 820px) {
@@ -765,6 +902,15 @@
         .cta-band {
           padding-top: 22px !important;
           padding-bottom: 22px !important;
+        }
+
+        .review-carousel {
+          --review-visible: 1;
+        }
+
+        .review-card {
+          min-height: auto;
+          padding: 24px;
         }
 
         .cta-panel {
@@ -857,7 +1003,7 @@
           </p>
           <div class="hero-actions">
             <a
-              class="btn btn-primary"
+              class="btn btn-primary sellbot-wpp-open"
               href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
               target="_blank"
               rel="noopener noreferrer"
@@ -996,6 +1142,183 @@
         </div>
       </section>
 
+      <section class="section" id="avaliacoes">
+        <div class="container">
+          <div class="review-panel">
+            <div class="review-header">
+              <p class="eyebrow" style="margin-bottom: 0">Depoimentos</p>
+              <strong>Avaliações reais do Google</strong>
+            </div>
+
+            <div class="review-carousel" aria-label="Depoimentos de pacientes">
+              <div class="review-track">
+                <article class="review-slide">
+                  <div class="review-card">
+                    <div class="review-author">
+                      <div class="review-avatar">J</div>
+                      <div>
+                        <h3>Jenny Malik</h3>
+                        <span>4 avaliações</span>
+                      </div>
+                    </div>
+                    <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+                    <p>
+                      Excelente atendimento! Fui muito bem recebida desde o primeiro contato. A
+                      equipe é atenciosa, profissional e transmite muita confiança. O ambiente é
+                      limpo, organizado e acolhedor. O tratamento foi realizado com muito cuidado e
+                      atenção aos detalhes. Estou muito satisfeita com o resultado e recomendo a
+                      clínica para quem busca qualidade e um atendimento humanizado. Parabéns a toda
+                      a equipe!
+                    </p>
+                  </div>
+                </article>
+
+                <article class="review-slide">
+                  <div class="review-card">
+                    <div class="review-author">
+                      <div class="review-avatar">C</div>
+                      <div>
+                        <h3>Claudio Marinho</h3>
+                        <span>1 avaliação</span>
+                      </div>
+                    </div>
+                    <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+                    <p>
+                      Atendimento muito atencioso aos detalhes, levando em consideração as condições
+                      gerais de saúde antes do procedimento odontológico. Levei minha mãe idosa e me
+                      senti tranquilo e muito confiante. E o procedimento foi um sucesso!
+                    </p>
+                  </div>
+                </article>
+
+                <article class="review-slide">
+                  <div class="review-card">
+                    <div class="review-author">
+                      <div class="review-avatar">L</div>
+                      <div>
+                        <h3>Luciene Vannucchi</h3>
+                        <span>2 avaliações</span>
+                      </div>
+                    </div>
+                    <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+                    <p>
+                      Excelente atendimento!!! Fui atendida com muito cuidado, atenção e com um
+                      profissionalismo ímpar. Me senti muito acolhida e cuidada. As explicações todas
+                      muito claras sobre meu tratamento. Nota mil !!!
+                    </p>
+                  </div>
+                </article>
+
+                <article class="review-slide">
+                  <div class="review-card">
+                    <div class="review-author">
+                      <div class="review-avatar">C</div>
+                      <div>
+                        <h3>Claudia Godoi</h3>
+                        <span>3 avaliações</span>
+                      </div>
+                    </div>
+                    <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+                    <p>
+                      Atendimento impecável, me senti muito segura e confortável. Fiquei muito
+                      contente com o resultado. Obrigada Dra, voltarei.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="review-slide">
+                  <div class="review-card">
+                    <div class="review-author">
+                      <div class="review-avatar">M</div>
+                      <div>
+                        <h3>moises soliban</h3>
+                        <span>Local Guide · 13 avaliações</span>
+                      </div>
+                    </div>
+                    <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+                    <p>
+                      Excelente atendimento. Dra. Noedja é segura, atenciosa e objetiva. Clínica
+                      organizada e agradável. Recomendo.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="review-slide">
+                  <div class="review-card">
+                    <div class="review-author">
+                      <div class="review-avatar">E</div>
+                      <div>
+                        <h3>Elisa C Ghilardi</h3>
+                        <span>Local Guide · 15 avaliações</span>
+                      </div>
+                    </div>
+                    <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+                    <p>
+                      A Dra. Noedja é maravilhosa, cuidadosa e excelente profissional! Obrigada por
+                      tudo, Dra.!
+                    </p>
+                  </div>
+                </article>
+
+                <article class="review-slide">
+                  <div class="review-card">
+                    <div class="review-author">
+                      <div class="review-avatar">C</div>
+                      <div>
+                        <h3>Clarty Galvao</h3>
+                        <span>Local Guide · 147 avaliações</span>
+                      </div>
+                    </div>
+                    <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+                    <p>
+                      Mãos precisas, procedimentos cuidadosos e atentos à menopausa, saúde dentro do
+                      sangue que a tudo irriga.
+                    </p>
+                  </div>
+                </article>
+
+                <article class="review-slide">
+                  <div class="review-card">
+                    <div class="review-author">
+                      <div class="review-avatar">S</div>
+                      <div>
+                        <h3>Suely Bacic Cavalcante</h3>
+                        <span>Local Guide · 23 avaliações</span>
+                      </div>
+                    </div>
+                    <div class="review-stars" aria-label="5 estrelas">★★★★★</div>
+                    <p>
+                      Super indico, lugar lindo, acolhedor e de um atendimento TOP.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="review-controls" aria-label="Controles dos depoimentos">
+              <button class="review-button" type="button" data-review-prev aria-label="Depoimento anterior">
+                ‹
+              </button>
+              <div class="review-dots" aria-hidden="true"></div>
+              <button class="review-button" type="button" data-review-next aria-label="Próximo depoimento">
+                ›
+              </button>
+            </div>
+
+            <div style="text-align: center">
+              <a
+                class="btn btn-primary"
+                href="https://google.com/maps/place/Bacic+Odontologia+Integrada/data=!4m2!3m1!1s0x0:0x2b953aa0f920be20?sa=X&ved=1t:2428&ictx=111"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ver avaliações no Google
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section method-section" id="metodologia">
         <div class="container method-grid">
           <div class="image-card tall">
@@ -1069,7 +1392,7 @@
                 <span>CRO 157183 • Responsável técnica</span>
               </div>
               <a
-                class="btn btn-primary"
+                class="btn btn-primary sellbot-wpp-open"
                 href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1150,7 +1473,7 @@
                   Ver rota no Maps
                 </a>
                 <a
-                  class="btn btn-secondary"
+                  class="btn btn-secondary sellbot-wpp-open"
                   href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
                   target="_blank"
                   rel="noopener noreferrer"
@@ -1175,7 +1498,7 @@
               <p>Nossa equipe está pronta para orientar o próximo passo para sua saúde bucal.</p>
             </div>
             <a
-              class="btn"
+              class="btn sellbot-wpp-open"
               style="background: var(--basic-blue-light); color: var(--basic-navy)"
               href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
               target="_blank"
@@ -1283,7 +1606,7 @@
             </p>
             <p>
               <a
-                class="contact-link"
+                class="contact-link sellbot-wpp-open"
                 href="https://wa.me/5511924558697"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -1311,17 +1634,11 @@
       </div>
     </footer>
 
-    <a
-      class="floating-whatsapp"
-      href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-    </a>
-
+    <script src="https://plugin.sellbot.tech/assets/js/sellbot_plugin.min.js"></script>
     <script>
       const faqItems = document.querySelectorAll(".faq-item");
       const yearEl = document.getElementById("current-year");
+      const reviewCarousel = document.querySelector(".review-carousel");
 
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
@@ -1335,6 +1652,83 @@
           item.classList.toggle("open");
         });
       });
+
+      if (reviewCarousel) {
+        const track = reviewCarousel.querySelector(".review-track");
+        const slides = Array.from(reviewCarousel.querySelectorAll(".review-slide"));
+        const prevButton = document.querySelector("[data-review-prev]");
+        const nextButton = document.querySelector("[data-review-next]");
+        const dotsWrap = document.querySelector(".review-dots");
+        let currentReview = 0;
+        let autoReviewTimer;
+
+        const getVisibleReviews = () => {
+          const value = getComputedStyle(reviewCarousel).getPropertyValue("--review-visible");
+          return Math.max(1, Number.parseInt(value, 10) || 1);
+        };
+
+        const getMaxReview = () => Math.max(0, slides.length - getVisibleReviews());
+
+        const updateReviews = () => {
+          if (!track) return;
+          const visibleReviews = getVisibleReviews();
+          currentReview = Math.min(currentReview, getMaxReview());
+          track.style.transform = `translateX(-${currentReview * (100 / visibleReviews)}%)`;
+          dotsWrap?.querySelectorAll(".review-dot").forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentReview);
+          });
+        };
+
+        const buildReviewDots = () => {
+          if (!dotsWrap) return;
+          dotsWrap.innerHTML = "";
+          for (let index = 0; index <= getMaxReview(); index += 1) {
+            const dot = document.createElement("button");
+            dot.className = "review-dot";
+            dot.type = "button";
+            dot.setAttribute("aria-label", `Ver grupo de depoimentos ${index + 1}`);
+            dot.addEventListener("click", () => {
+              currentReview = index;
+              updateReviews();
+              restartAutoReviews();
+            });
+            dotsWrap.appendChild(dot);
+          }
+        };
+
+        const nextReview = () => {
+          currentReview = currentReview >= getMaxReview() ? 0 : currentReview + 1;
+          updateReviews();
+        };
+
+        const restartAutoReviews = () => {
+          window.clearInterval(autoReviewTimer);
+          autoReviewTimer = window.setInterval(nextReview, 5000);
+        };
+
+        buildReviewDots();
+        updateReviews();
+        restartAutoReviews();
+
+        reviewCarousel.addEventListener("mouseenter", () => window.clearInterval(autoReviewTimer));
+        reviewCarousel.addEventListener("mouseleave", restartAutoReviews);
+
+        window.addEventListener("resize", () => {
+          buildReviewDots();
+          updateReviews();
+        });
+
+        prevButton?.addEventListener("click", () => {
+          currentReview = currentReview <= 0 ? getMaxReview() : currentReview - 1;
+          updateReviews();
+          restartAutoReviews();
+        });
+
+        nextButton?.addEventListener("click", () => {
+          nextReview();
+          restartAutoReviews();
+        });
+      }
     </script>
   </body>
 </html>

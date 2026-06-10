@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Bacic Odontologia Integrada: atendimento odontológico ético, humanizado e próximo à Avenida Paulista."
+      content="Tratamento de canal e Endodontia na Consolação, próximo à Avenida Paulista. Avaliação criteriosa, atendimento humanizado e foco na preservação dental."
     />
     <link rel="icon" type="image/png" href="./assets/favicon.png" />
-    <title>Bacic Odontologia Integrada</title>
+    <title>Tratamento de Canal perto da Avenida Paulista | Bacic Odontologia</title>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -161,7 +161,7 @@
         overflow: hidden;
         background:
           linear-gradient(rgba(247, 244, 238, 0.78), rgba(247, 244, 238, 0.78)),
-          url("./assets/hero.jpg") center / cover no-repeat;
+          url("./assets/hero_endodontia.webp") center / cover no-repeat;
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -234,7 +234,7 @@
       }
 
       .service-grid {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
+        grid-template-columns: repeat(4, minmax(0, 1fr));
       }
 
       .service-card {
@@ -875,11 +875,34 @@
         .hero {
           background:
             linear-gradient(rgba(247, 244, 238, 0.74), rgba(247, 244, 238, 0.74)),
-            url("./assets/hero.jpg") calc(62% - 200px) center / cover no-repeat;
+            url("./assets/hero_endodontia.webp") calc(50% - 300px) center / cover no-repeat;
+        }
+
+        .hero .title br {
+          display: none;
         }
 
         .service-grid {
           grid-template-columns: 1fr;
+        }
+
+        .service-card {
+          text-align: center;
+        }
+
+        .service-icon {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        #sobre .about-grid > div:first-child,
+        #localizacao .location-grid > div:first-child {
+          order: 2;
+        }
+
+        #sobre .about-grid > div:last-child,
+        #localizacao .location-grid > div:last-child {
+          order: 1;
         }
 
         #tratamentos {
@@ -995,16 +1018,18 @@
         <div class="container hero-grid">
           <img class="hero-logo" src="./assets/logo-basic.webp" alt="Logo Bacic Odontologia" />
           <h1 class="title">
-            Cuidado, critério <br />
-            <em>e humanização</em>
+            Tratamento de canal com <br />
+            <em>cuidado, critério e humanização</em>
           </h1>
           <p class="text-lg">
-            Atendimento odontológico próximo à Avenida Paulista.
+            Endodontia para aliviar desconfortos, tratar infecções internas do dente e preservar
+            sua saúde bucal com uma avaliação individualizada. Atendimento odontológico próximo à
+            Avenida Paulista, com orientação clara do diagnóstico à finalização do tratamento.
           </p>
           <div class="hero-actions">
             <a
               class="btn btn-primary sellbot-wpp-open"
-              href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
+              href="https://wa.me/5511924558697?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20tratamento%20de%20canal%2Fendodontia%20na%20Bacic%20Odontologia."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1018,25 +1043,30 @@
         <div class="container">
           <div class="split-header">
             <div>
-              <p class="eyebrow">Nossa atuação</p>
-              <h2 class="title">Cuidados completos para diferentes necessidades</h2>
+              <p class="eyebrow">Quando procurar</p>
+              <h2 class="title">Quando o tratamento de canal pode ser necessário?</h2>
             </div>
             <p class="text-lg">
-              Da prevenção aos tratamentos restauradores, a Bacic Odontologia reúne diferentes áreas da
-              odontologia para orientar cada paciente de forma individualizada.
+              A Endodontia cuida da parte interna do dente, especialmente quando a polpa dental
+              está inflamada, infectada ou comprometida. Na Bacic Odontologia, cada caso é
+              avaliado com atenção para entender a origem do desconforto e indicar o caminho mais
+              adequado.
             </p>
           </div>
 
-                    <div class="service-grid">
+          <div class="service-grid">
             <article class="service-card">
               <div>
                 <img
                   class="service-icon"
                   src="./assets/010-smile.svg"
-                  alt="Ícone de sorriso"
+                  alt="Dor espontânea ou persistente"
                 />
-                <h3>Profilaxia e prevenção</h3>
-                <p>Cuidados essenciais para manter a saúde bucal em dia e acompanhamento constante.</p>
+                <h3>Dor espontânea ou persistente</h3>
+                <p>
+                  Desconfortos que surgem sem estímulo ou permanecem por muito tempo podem indicar
+                  alteração na parte interna do dente.
+                </p>
               </div>
             </article>
             <article class="service-card">
@@ -1044,10 +1074,13 @@
                 <img
                   class="service-icon"
                   src="./assets/009-lips.svg"
-                  alt="Ícone de periodontia"
+                  alt="Sensibilidade prolongada"
                 />
-                <h3>Periodontia</h3>
-                <p>Prevenção e tratamento das estruturas de suporte e da saúde periodontal.</p>
+                <h3>Sensibilidade prolongada</h3>
+                <p>
+                  Dor ao frio, ao calor ou ao mastigar que demora a passar merece avaliação
+                  criteriosa.
+                </p>
               </div>
             </article>
             <article class="service-card">
@@ -1055,10 +1088,13 @@
                 <img
                   class="service-icon"
                   src="./assets/005-broken-tooth.svg"
-                  alt="Ícone de dentística restauradora"
+                  alt="Cárie profunda"
                 />
-                <h3>Dentística restauradora</h3>
-                <p>Restaurações para recuperar função, conforto e estética natural.</p>
+                <h3>Cárie profunda</h3>
+                <p>
+                  Quando a cárie avança até regiões internas do dente, o canal pode ser necessário
+                  para tratar a infecção e preservar a estrutura dental.
+                </p>
               </div>
             </article>
             <article class="service-card">
@@ -1066,10 +1102,13 @@
                 <img
                   class="service-icon"
                   src="./assets/008-white-teeth.svg"
-                  alt="Ícone de clareamento dental"
+                  alt="Trauma ou fratura dental"
                 />
-                <h3>Clareamento dental</h3>
-                <p>Procedimento indicado após avaliação criteriosa da saúde de dentes e gengivas.</p>
+                <h3>Trauma ou fratura dental</h3>
+                <p>
+                  Pancadas, trincas ou fraturas podem comprometer a polpa mesmo quando o dente
+                  parece visualmente preservado.
+                </p>
               </div>
             </article>
             <article class="service-card">
@@ -1077,10 +1116,13 @@
                 <img
                   class="service-icon"
                   src="./assets/0151-denture.svg"
-                  alt="Ícone de prótese"
+                  alt="Inchaço ou sinal de infecção"
                 />
-                <h3>Prótese</h3>
-                <p>Reabilitação total ou parcial para devolver segurança ao sorrir e mastigar.</p>
+                <h3>Inchaço ou sinal de infecção</h3>
+                <p>
+                  Alterações na gengiva, presença de bolinha, inchaço ou dor localizada podem estar
+                  relacionadas a processos infecciosos.
+                </p>
               </div>
             </article>
             <article class="service-card">
@@ -1088,10 +1130,13 @@
                 <img
                   class="service-icon"
                   src="./assets/022-tooth-3.svg"
-                  alt="Ícone de odontologia domiciliar"
+                  alt="Retratamento de canal"
                 />
-                <h3>Odontologia domiciliar</h3>
-                <p>Atendimento humanizado para quem necessita de cuidados fora do consultório.</p>
+                <h3>Retratamento de canal</h3>
+                <p>
+                  Dentes já tratados anteriormente podem precisar de nova avaliação quando voltam a
+                  apresentar sintomas ou sinais de alteração.
+                </p>
               </div>
             </article>
             <article class="service-card">
@@ -1099,10 +1144,13 @@
                 <img
                   class="service-icon"
                   src="./assets/030-tooth-2.svg"
-                  alt="Ícone de endodontia"
+                  alt="Dente escurecido"
                 />
-                <h3>Endodontia</h3>
-                <p>Tratamento de canal focado no alívio da dor e preservação dental.</p>
+                <h3>Dente escurecido</h3>
+                <p>
+                  Mudanças de cor podem estar associadas a trauma antigo ou alterações internas que
+                  exigem investigação clínica.
+                </p>
               </div>
             </article>
             <article class="service-card">
@@ -1110,32 +1158,13 @@
                 <img
                   class="service-icon"
                   src="./assets/028-dentist.svg"
-                  alt="Ícone de cirurgia"
+                  alt="Avaliação antes de prótese ou restauração"
                 />
-                <h3>Cirurgia</h3>
-                <p>Procedimentos clínicos com planejamento, biossegurança e condução cuidadosa.</p>
-              </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/007-prosthesis.svg"
-                  alt="Ícone de implantodontia"
-                />
-                <h3>Implantodontia</h3>
-                <p>Reposição dentária moderna com técnicas consolidadas e planejamento individual.</p>
-              </div>
-            </article>
-            <article class="service-card">
-              <div>
-                <img
-                  class="service-icon"
-                  src="./assets/015-doctor-3.svg"
-                  alt="Ícone de harmonização orofacial"
-                />
-                <h3>Harmonização orofacial</h3>
-                <p>Busca pelo equilíbrio facial com indicação técnica, clínica e responsável.</p>
+                <h3>Avaliação antes de prótese ou restauração</h3>
+                <p>
+                  Em alguns casos, o tratamento endodôntico pode fazer parte do planejamento
+                  restaurador ou reabilitador.
+                </p>
               </div>
             </article>
           </div>
@@ -1148,6 +1177,17 @@
             <div class="review-header">
               <p class="eyebrow" style="margin-bottom: 0">Depoimentos</p>
               <strong>Avaliações reais do Google</strong>
+              <p
+                style="
+                  margin: 12px auto 0;
+                  max-width: 760px;
+                  color: var(--basic-navy-muted);
+                  line-height: 1.8;
+                "
+              >
+                Pacientes destacam o acolhimento, a clareza nas explicações e o cuidado em cada
+                etapa do atendimento.
+              </p>
             </div>
 
             <div class="review-carousel" aria-label="Depoimentos de pacientes">
@@ -1324,40 +1364,48 @@
           <div class="image-card tall">
             <img
               src="./assets/metodologia.jpg"
-              alt="Atendimento humanizado na Bacic"
+              alt="Atendimento odontológico humanizado para tratamento de canal na Bacic Odontologia"
             />
-            <div class="badge">Clínica certificada e ética</div>
+            <div class="badge">Diagnóstico cuidadoso e ético</div>
           </div>
 
           <div>
-            <p class="eyebrow">Metodologia</p>
-            <h2 class="title">Antes de indicar um tratamento, entendemos você</h2>
+            <h2 class="title">Antes de tratar o canal, entendemos a origem do problema</h2>
             <p class="text-lg" style="margin-top: 24px">
-              A odontologia integrada permite olhar para a saúde bucal de forma mais completa.
-              Na Bacic, a avaliação considera suas queixas, sua rotina, sua saúde geral e as
-              reais possibilidades de sucesso clínico.
+              O tratamento de canal exige diagnóstico, planejamento e acompanhamento cuidadoso. Na
+              Bacic Odontologia, a avaliação considera seus sintomas, histórico clínico, exames
+              necessários e as reais condições do dente antes de qualquer indicação.
             </p>
 
             <div class="method-steps" style="margin-top: 36px">
               <div class="method-step">
                 <div class="method-step-number">01</div>
                 <div>
-                  <h3>Avaliação atenta</h3>
-                  <p>Tempo para ouvir seu histórico, entender desconfortos e mapear prioridades.</p>
+                  <h3>Avaliação e diagnóstico</h3>
+                  <p>
+                    Tempo para ouvir sua queixa, entender o histórico da dor, examinar o dente e
+                    solicitar exames quando necessário.
+                  </p>
                 </div>
               </div>
               <div class="method-step">
                 <div class="method-step-number">02</div>
                 <div>
-                  <h3>Orientação clara</h3>
-                  <p>Explicações técnicas em linguagem simples, com transparência em cada etapa.</p>
+                  <h3>Planejamento explicado com clareza</h3>
+                  <p>
+                    Orientação simples e transparente sobre o que foi identificado, quais etapas
+                    podem ser necessárias e quais cuidados fazem parte do tratamento.
+                  </p>
                 </div>
               </div>
               <div class="method-step">
                 <div class="method-step-number">03</div>
                 <div>
-                  <h3>Cuidado contínuo</h3>
-                  <p>Plano de manutenção preventiva com foco em longevidade e bem-estar bucal.</p>
+                  <h3>Tratamento e acompanhamento</h3>
+                  <p>
+                    Condução cuidadosa do procedimento, com atenção ao conforto, à biossegurança e
+                    à preservação do dente sempre que clinicamente possível.
+                  </p>
                 </div>
               </div>
             </div>
@@ -1372,17 +1420,18 @@
             <div class="about-copy" style="margin-top: 28px">
               <p>
                 Localizada estrategicamente na <strong>Consolação</strong>, a apenas um quarteirão
-                da Avenida Paulista, a Bacic Odontologia Integrada foi idealizada para resgatar a
-                essência do atendimento próximo.
+                da Avenida Paulista, a Bacic Odontologia Integrada foi idealizada para oferecer um
+                atendimento próximo, ético e cuidadoso.
               </p>
               <p>
-                Sob a responsabilidade técnica da <strong>Dra. Noedja Bacic</strong>, cada
-                indicação é baseada em critério clínico sólido, ética odontológica e respeito ao
-                tempo do paciente.
+                No tratamento de canal, essa filosofia se torna ainda mais importante: muitos
+                pacientes chegam com dor, medo ou insegurança. Por isso, cada indicação é feita
+                com critério clínico, explicações claras e respeito ao tempo de cada pessoa.
               </p>
               <p>
-                Nossa estrutura foi pensada para oferecer um ambiente de calma e acolhimento,
-                contrapondo o ritmo acelerado da região da Paulista.
+                Sob a responsabilidade técnica da <strong>Dra. Noedja Bacic</strong>, a clínica
+                reúne visão integrada, acolhimento e estrutura pensada para proporcionar uma
+                experiência mais tranquila em meio à rotina acelerada da região da Paulista.
               </p>
             </div>
 
@@ -1393,7 +1442,7 @@
               </div>
               <a
                 class="btn btn-primary sellbot-wpp-open"
-                href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
+                href="https://wa.me/5511924558697?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20tratamento%20de%20canal%2Fendodontia%20na%20Bacic%20Odontologia."
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1405,7 +1454,7 @@
           <div class="image-card tall">
             <img
               src="./assets/sobre.jpg"
-              alt="Dra. Noedja Bacic"
+              alt="Dra. Noedja Bacic, responsável técnica da Bacic Odontologia"
             />
           </div>
         </div>
@@ -1418,28 +1467,60 @@
 
           <div class="differentials-grid">
             <div class="differential">
-              <h3>Localização estratégica</h3>
-              <p>A poucos passos da Av. Paulista, em região central, segura e de fácil acesso.</p>
+              <h3>Diagnóstico criterioso</h3>
+              <p>
+                Avaliação cuidadosa para entender se o canal é realmente necessário e qual é a
+                melhor conduta para cada caso.
+              </p>
             </div>
             <div class="differential">
-              <h3>Atendimento próximo</h3>
-              <p>Uma abordagem cuidadosa, sem a pressa comum de grandes clínicas.</p>
+              <h3>Atendimento humanizado</h3>
+              <p>
+                Uma abordagem acolhedora para pacientes que chegam com dor, medo ou dúvidas sobre o
+                procedimento.
+              </p>
+            </div>
+            <div class="differential">
+              <h3>Explicações claras</h3>
+              <p>
+                Orientações em linguagem simples para que você entenda cada etapa do tratamento e
+                se sinta mais seguro.
+              </p>
+            </div>
+            <div class="differential">
+              <h3>Foco na preservação dental</h3>
+              <p>
+                Quando há indicação clínica, o tratamento de canal pode ajudar a manter o dente
+                natural e sua função na mastigação.
+              </p>
             </div>
             <div class="differential">
               <h3>Visão integrada</h3>
-              <p>Diferentes especialidades reunidas sob a mesma filosofia de cuidado.</p>
-            </div>
-            <div class="differential">
-              <h3>Foco na saúde</h3>
-              <p>Indicações pautadas em critério clínico, ética odontológica e necessidade real.</p>
-            </div>
-            <div class="differential">
-              <h3>Conveniência aos sábados</h3>
-              <p>Atendimento pensado para conciliar sua saúde com uma rotina corrida.</p>
+              <p>
+                Avaliação da saúde bucal como um todo, considerando restaurações, gengiva, mordida
+                e necessidade de acompanhamento.
+              </p>
             </div>
             <div class="differential">
               <h3>Biossegurança e conforto</h3>
-              <p>Ambiente preparado com rigor técnico para transmitir tranquilidade.</p>
+              <p>
+                Ambiente preparado com rigor técnico, organização e cuidado para transmitir
+                tranquilidade durante o atendimento.
+              </p>
+            </div>
+            <div class="differential">
+              <h3>Localização estratégica</h3>
+              <p>
+                A poucos passos da Avenida Paulista, com fácil acesso para quem trabalha, estuda ou
+                mora na região central de São Paulo.
+              </p>
+            </div>
+            <div class="differential">
+              <h3>Conveniência aos sábados</h3>
+              <p>
+                Atendimento com agendamento prévio para facilitar o cuidado odontológico em uma
+                rotina corrida.
+              </p>
             </div>
           </div>
         </div>
@@ -1449,18 +1530,18 @@
         <div class="container location-grid">
           <div>
             <p class="eyebrow">São Paulo • Consolação</p>
-            <h2 class="title">No coração da cidade, ao lado da Paulista</h2>
+            <h2 class="title">Tratamento de canal próximo à Avenida Paulista</h2>
             <p class="text-lg" style="margin-top: 24px">
-              Nossa localização na Rua Luís Coelho foi escolhida para facilitar o dia a dia de
-              quem reside, estuda ou trabalha nas imediações do maior centro financeiro da América
-              Latina.
+              A Bacic Odontologia está localizada na Rua Luís Coelho, na Consolação, em uma região
+              central e de fácil acesso para quem reside, estuda ou trabalha nas imediações da
+              Avenida Paulista.
             </p>
 
             <div class="contact-box" style="margin-top: 8px">
               <div class="contact-address">
                 <strong>Rua Luís Coelho, 308</strong>
                 <p>Consolação, São Paulo/SP</p>
-                <div class="contact-chip">Próximo ao metrô Consolação e à Av. Paulista</div>
+                <div class="contact-chip">Próximo ao metrô Consolação e à Avenida Paulista</div>
               </div>
 
               <div class="button-row">
@@ -1474,7 +1555,7 @@
                 </a>
                 <a
                   class="btn btn-secondary sellbot-wpp-open"
-                  href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
+                  href="https://wa.me/5511924558697?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20tratamento%20de%20canal%2Fendodontia%20na%20Bacic%20Odontologia."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -1485,7 +1566,7 @@
           </div>
 
           <div class="map-frame">
-            <img src="./assets/localizacao.jpg" alt="Localização Bacic Odontologia" />
+            <img src="./assets/localizacao.jpg" alt="Localização da Bacic Odontologia na Rua Luís Coelho, Consolação" />
           </div>
         </div>
       </section>
@@ -1494,13 +1575,16 @@
         <div class="container">
           <div class="cta-panel">
             <div>
-              <h3>Deseja uma avaliação profissional?</h3>
-              <p>Nossa equipe está pronta para orientar o próximo passo para sua saúde bucal.</p>
+              <h3>Precisa avaliar uma dor de dente ou suspeita de canal?</h3>
+              <p>
+                Nossa equipe está pronta para entender seu caso, orientar o próximo passo e indicar
+                o tratamento mais adequado com segurança e clareza.
+              </p>
             </div>
             <a
               class="btn sellbot-wpp-open"
               style="background: var(--basic-blue-light); color: var(--basic-navy)"
-              href="https://wa.me/5511924558697?text=Ol%C3%A1%2C%20vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia%20Integrada."
+              href="https://wa.me/5511924558697?text=Ol%C3%A1%21%20Estou%20com%20suspeita%20de%20precisar%20de%20tratamento%20de%20canal%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Bacic%20Odontologia."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1520,6 +1604,79 @@
           <div class="faq-wrap">
             <div class="faq-item">
               <button class="faq-question" type="button">
+                <span>O que é tratamento de canal?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                O tratamento de canal é um procedimento da Endodontia indicado quando a parte
+                interna do dente, chamada polpa dental, está inflamada, infectada ou comprometida.
+                O objetivo é limpar, desinfectar e selar os canais internos para preservar o dente
+                sempre que possível.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Quando posso precisar de um tratamento de canal?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                Dor persistente, sensibilidade prolongada ao frio ou calor, dor ao mastigar, cárie
+                profunda, trauma, fratura, inchaço ou presença de uma bolinha na gengiva podem
+                indicar a necessidade de avaliação endodôntica.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Tratamento de canal dói?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                O procedimento é realizado com anestesia local e planejamento adequado. Cada
+                paciente pode ter uma experiência diferente, mas o objetivo é conduzir o tratamento
+                com conforto, cuidado e controle do desconforto.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>O canal salva o dente?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                Em muitos casos, o tratamento de canal permite preservar o dente natural, evitando
+                a extração. Porém, a possibilidade de manter o dente depende da avaliação clínica,
+                da estrutura remanescente e das condições da raiz e dos tecidos ao redor.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>O tratamento termina no canal?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                Nem sempre. Após o tratamento endodôntico, pode ser necessário restaurar o dente
+                com restauração, bloco ou coroa, dependendo da perda de estrutura dental. Essa
+                etapa é importante para proteger o dente e devolver função.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Um dente que já fez canal pode voltar a doer?</span>
+                <span class="faq-icon">⌄</span>
+              </button>
+              <div class="faq-answer">
+                Sim. Dentes tratados anteriormente podem apresentar novos sintomas por diferentes
+                motivos, como infiltrações, fraturas, reinfecção ou alterações ao redor da raiz.
+                Nesses casos, é importante fazer uma nova avaliação.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" type="button">
                 <span>A Bacic Odontologia fica perto da Avenida Paulista?</span>
                 <span class="faq-icon">⌄</span>
               </button>
@@ -1531,13 +1688,13 @@
 
             <div class="faq-item">
               <button class="faq-question" type="button">
-                <span>Quais tratamentos a clínica oferece?</span>
+                <span>Preciso ter certeza de que é canal antes de agendar?</span>
                 <span class="faq-icon">⌄</span>
               </button>
               <div class="faq-answer">
-                A clínica atua com odontologia integrada, incluindo prevenção, estética,
-                reabilitação, implantes, canal, periodontia, cirurgias, atendimento domiciliar e
-                harmonização orofacial.
+                Não. A avaliação existe justamente para entender sua queixa, realizar o diagnóstico
+                e indicar se o tratamento de canal é necessário ou se há outra conduta mais
+                adequada.
               </div>
             </div>
 
@@ -1549,17 +1706,6 @@
               <div class="faq-answer">
                 Sim. Os atendimentos aos sábados ajudam pacientes com agenda mais restrita durante
                 a semana, sempre com agendamento prévio.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question" type="button">
-                <span>Preciso saber qual tratamento fazer antes de agendar?</span>
-                <span class="faq-icon">⌄</span>
-              </button>
-              <div class="faq-answer">
-                Não. A avaliação inicial existe justamente para entender sua necessidade, realizar
-                o diagnóstico e indicar o plano mais adequado.
               </div>
             </div>
           </div>
