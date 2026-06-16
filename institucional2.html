@@ -249,6 +249,7 @@
       }
 
       .benefit-item,
+      .need-group,
       .need-item,
       .review-panel {
         border: 1px solid rgba(16, 24, 50, 0.08);
@@ -265,7 +266,25 @@
       }
 
       .need-grid {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .need-group {
+        padding: 28px;
+      }
+
+      .need-group-title {
+        margin: 0 0 18px;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.45rem;
+        line-height: 1.1;
+      }
+
+      .need-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
       }
 
       .need-item {
@@ -273,6 +292,7 @@
         color: var(--basic-navy-muted);
         font-weight: 700;
         text-align: center;
+        background: var(--basic-offwhite);
       }
 
       .review-panel {
@@ -900,8 +920,8 @@
       }
 
       @media (max-width: 1080px) {
-        .need-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+        .need-list {
+          grid-template-columns: 1fr;
         }
 
         .service-grid {
@@ -970,8 +990,13 @@
         }
 
         .service-grid,
-        .need-grid {
+        .need-grid,
+        .need-list {
           grid-template-columns: 1fr;
+        }
+
+        .need-group {
+          padding: 22px;
         }
 
         .review-carousel {
@@ -1107,49 +1132,52 @@
         </div>
       </section>
 
-      <section class="section" id="beneficios" style="padding-bottom: 0">
-        <div class="container">
-          <div class="quick-benefits">
-            <div class="benefit-item">✓ Próximo à Av. Paulista</div>
-            <div class="benefit-item">✓ Atendimento particular</div>
-            <div class="benefit-item">✓ Clínica geral e especialidades</div>
-          </div>
-        </div>
-      </section>
-
       <section class="section" id="quando-procurar">
         <div class="container">
           <div class="split-header">
             <div>
               <p class="eyebrow">Quando procurar a clínica</p>
-              <h2 class="title">Sinais e necessidades que merecem atenção</h2>
+              <h2 class="title">Quando procurar a Bacic Odontologia?</h2>
             </div>
             <p class="text-lg">
-              Está há muito tempo sem ir ao dentista, precisa de uma limpeza ou sente dor,
-              incômodo e sensibilidade? A avaliação profissional ajuda a entender a causa e definir
-              o melhor caminho.
+              Se você sente algum incômodo, está há muito tempo sem ir ao dentista ou quer avaliar
+              um tratamento, a primeira consulta ajuda a entender sua necessidade e indicar o melhor
+              caminho com segurança.
             </p>
           </div>
 
           <div class="need-grid">
-            <div class="need-item">Dor de dente</div>
-            <div class="need-item">Limpeza</div>
-            <div class="need-item">Restauração</div>
-            <div class="need-item">Avaliação</div>
-            <div class="need-item">Gengiva</div>
-            <div class="need-item">Canal</div>
-            <div class="need-item">Dente quebrado</div>
-            <div class="need-item">Sensibilidade</div>
-            <div class="need-item">Mau hálito</div>
-            <div class="need-item">Prótese</div>
-            <div class="need-item">Implante</div>
-            <div class="need-item">Prevenção</div>
+            <div class="need-group">
+              <h3 class="need-group-title">Sinais e queixas comuns</h3>
+              <div class="need-list">
+                <div class="need-item">Dor de dente</div>
+                <div class="need-item">Sensibilidade</div>
+                <div class="need-item">Gengiva sangrando ou inflamada</div>
+                <div class="need-item">Mau hálito</div>
+                <div class="need-item">Dente quebrado</div>
+                <div class="need-item">Restauração quebrada ou antiga</div>
+              </div>
+            </div>
+            <div class="need-group">
+              <h3 class="need-group-title">Cuidados e tratamentos</h3>
+              <div class="need-list">
+                <div class="need-item">Avaliação odontológica</div>
+                <div class="need-item">Limpeza e prevenção</div>
+                <div class="need-item">Restauração</div>
+                <div class="need-item">Tratamento de canal</div>
+                <div class="need-item">Prótese dentária</div>
+                <div class="need-item">Implante dentário</div>
+              </div>
+            </div>
           </div>
 
           <div class="inline-cta">
             <div>
-              <h3>Fale pelo WhatsApp e conte o que você precisa avaliar.</h3>
-              <p>A equipe orienta o agendamento e o melhor próximo passo para o seu caso.</p>
+              <h3>Não sabe exatamente o que precisa?</h3>
+              <p>
+                Fale pelo WhatsApp, conte o que está sentindo e nossa equipe orienta o melhor
+                próximo passo para sua avaliação.
+              </p>
             </div>
             <a
               class="btn btn-primary sellbot-wpp-open"
