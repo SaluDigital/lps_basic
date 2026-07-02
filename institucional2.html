@@ -60,6 +60,93 @@
         text-decoration: none;
       }
 
+      .important-notice {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1200;
+        width: min(360px, calc(100vw - 32px));
+        padding: 22px 22px 18px;
+        border: 1px solid rgba(16, 24, 50, 0.1);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 28px 65px rgba(16, 24, 50, 0.24);
+        backdrop-filter: blur(14px);
+      }
+
+      .important-notice[hidden] {
+        display: none;
+      }
+
+      .important-notice-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 1190;
+        background: rgba(16, 24, 50, 0.28);
+        backdrop-filter: blur(3px);
+      }
+
+      .important-notice-backdrop[hidden] {
+        display: none;
+      }
+
+      .important-notice-close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        border: 0;
+        border-radius: 999px;
+        background: rgba(16, 24, 50, 0.08);
+        color: var(--basic-navy);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+      }
+
+      .important-notice-close:hover {
+        background: rgba(16, 24, 50, 0.14);
+        transform: scale(1.04);
+      }
+
+      .important-notice-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 10px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(16, 24, 50, 0.08);
+        color: var(--basic-navy);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .important-notice h3 {
+        margin: 0 28px 8px 0;
+        font-family: "Outfit", sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.1;
+      }
+
+      .important-notice p {
+        margin: 0;
+        color: var(--basic-navy-muted);
+        font-size: 0.94rem;
+        line-height: 1.55;
+      }
+
+      @media (max-width: 640px) {
+        .important-notice {
+          border-radius: 18px;
+          padding: 18px 18px 16px;
+        }
+      }
+
       .container {
         width: min(1180px, calc(100% - 40px));
         margin: 0 auto;
@@ -1103,6 +1190,16 @@
     </style>
   </head>
   <body>
+    <div class="important-notice-backdrop" id="important-notice-backdrop" aria-hidden="true"></div>
+    <aside class="important-notice" id="important-notice" aria-live="polite">
+      <button class="important-notice-close" type="button" aria-label="Fechar aviso">
+        ×
+      </button>
+      <span class="important-notice-badge">⚠️ Aviso Importante</span>
+      <h3>Não atendemos convênios.</h3>
+      <p>Não realizamos atendimento por convênios ou plano odontológico.</p>
+    </aside>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZFR9W6W"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1722,10 +1819,32 @@
       const faqItems = document.querySelectorAll(".faq-item");
       const yearEl = document.getElementById("current-year");
       const reviewCarousel = document.querySelector(".review-carousel");
+      const importantNoticeBackdrop = document.getElementById("important-notice-backdrop");
+      const importantNotice = document.getElementById("important-notice");
+      const noticeCloseButton = importantNotice?.querySelector(".important-notice-close");
 
       if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
       }
+
+      if (importantNotice && window.sessionStorage.getItem("important-notice-dismissed") === "true") {
+        importantNotice.hidden = true;
+        if (importantNoticeBackdrop) {
+          importantNoticeBackdrop.hidden = true;
+        }
+      }
+
+      const dismissImportantNotice = () => {
+        if (!importantNotice) return;
+        importantNotice.hidden = true;
+        if (importantNoticeBackdrop) {
+          importantNoticeBackdrop.hidden = true;
+        }
+        window.sessionStorage.setItem("important-notice-dismissed", "true");
+      };
+
+      noticeCloseButton?.addEventListener("click", dismissImportantNotice);
+      importantNoticeBackdrop?.addEventListener("click", dismissImportantNotice);
 
       faqItems.forEach((item) => {
         const button = item.querySelector(".faq-question");
