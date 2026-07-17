@@ -213,6 +213,20 @@
         margin: 0 auto;
       }
 
+      .hero .eyebrow {
+        font-family: "Outfit", sans-serif;
+        font-size: clamp(2rem, 4.2vw, 3.8rem);
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 0.95;
+        text-transform: none;
+      }
+
+      .hero .title {
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+
       .hero-actions,
       .button-row {
         display: flex;
@@ -370,19 +384,23 @@
         grid-template-columns: 64px 1fr;
         gap: 18px;
         align-items: start;
+        min-height: 70px;
       }
 
       .method-step-number {
+        align-self: start;
         color: rgba(190, 203, 231, 0.65);
         font-family: "Outfit", sans-serif;
         font-size: 2.8rem;
         font-weight: 700;
         line-height: 1;
+        text-align: center;
       }
 
       .method-step h3 {
-        margin: 0 0 8px;
+        margin: 0;
         font-size: 1.35rem;
+        line-height: 1.28;
       }
 
       .method-step p,
@@ -924,6 +942,10 @@
           padding: 35px 0;
         }
 
+        .hero .title {
+          font-size: 1.65rem;
+        }
+
         .hero-actions,
         .button-row {
           align-items: stretch;
@@ -983,6 +1005,15 @@
 
         .cta-panel {
           padding: 84px 0;
+        }
+
+        .cta-panel .btn {
+          width: fit-content;
+          max-width: 100%;
+        }
+
+        .footer {
+          padding: 64px 0;
         }
 
         .photo-card {
