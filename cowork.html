@@ -503,8 +503,35 @@
         position: relative;
         overflow: hidden;
         background:
-          linear-gradient(rgba(16, 24, 50, 0.58), rgba(16, 24, 50, 0.58)),
-          url("./assets/cowork.webp") center / cover fixed no-repeat;
+          radial-gradient(circle at 18% 24%, rgba(60, 112, 188, 0.38), transparent 30%),
+          radial-gradient(circle at 84% 74%, rgba(35, 211, 117, 0.16), transparent 28%),
+          linear-gradient(135deg, #071534 0%, #102b5b 52%, #06122d 100%);
+      }
+
+      .cta-band::before,
+      .cta-band::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .cta-band::before {
+        background-image: url("data:image/svg+xml,%3Csvg width='1600' height='520' viewBox='0 0 1600 520' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-linecap='round'%3E%3Cpath d='M-120 358 C 124 188 284 505 534 302 S 914 124 1188 276 1420 453 1720 218' stroke-opacity='.16' stroke-width='2'/%3E%3Cpath d='M-90 276 C 142 116 326 405 548 226 S 928 82 1198 214 1448 368 1690 154' stroke-opacity='.10' stroke-width='1.5'/%3E%3Cpath d='M80 472 C 218 374 320 472 438 382 S 658 258 790 340 1030 456 1186 328 1364 190 1534 258' stroke-opacity='.12' stroke-width='2'/%3E%3Cpath d='M132 76 C 210 18 286 110 212 166 S 54 156 104 88 250 34 330 106' stroke-opacity='.13' stroke-width='1.4'/%3E%3Cpath d='M1282 408 C 1362 350 1438 442 1364 498 S 1206 488 1256 420 1402 366 1482 438' stroke-opacity='.12' stroke-width='1.4'/%3E%3C/g%3E%3C/svg%3E");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.92;
+      }
+
+      .cta-band::after {
+        background:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+          linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+        background-size: 86px 86px;
+        -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), transparent 68%);
+        mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), transparent 68%);
+        opacity: 0.35;
       }
 
       .differentials .title,
@@ -772,6 +799,8 @@
       }
 
       .cta-panel {
+        position: relative;
+        z-index: 1;
         display: grid;
         justify-items: center;
         gap: 20px;
@@ -1054,7 +1083,7 @@
           <p class="eyebrow">Coworking odontológico na Consolação</p>
           <h1 class="title">Seu atendimento com mais estrutura, conforto e endereço estratégico</h1>
           <p class="text-lg">
-            Tenha acesso a uma estrutura odontológica pronta, confortável e bem localizada para realizar seus atendimentos com mais praticidade.
+            O modelo é ideal para dentistas com demanda própria e recém-formados que buscam uma estrutura pronta para atender.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#formulario">Tenho interesse em alugar o espaço</a>
@@ -1067,9 +1096,6 @@
               Falar pelo WhatsApp
             </a>
           </div>
-          <p class="hero-note">
-            O modelo é indicado para dentistas que já possuem demanda própria e desejam atender seus pacientes em uma estrutura odontológica pronta.
-          </p>
         </div>
       </section>
 
@@ -1119,7 +1145,7 @@
                   <path d="M11 13.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7ZM21 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M5.5 24a5.5 5.5 0 0 1 11 0M15.5 24a5.5 5.5 0 0 1 11 0" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
-                <h3>Ideal para dentistas com carteira própria de pacientes</h3>
+                <h3>Ideal para dentistas com carteira própria de pacientes e recém-formados em início de carreira</h3>
               </div>
             </article>
             <article class="service-card">
@@ -1240,6 +1266,11 @@
                       <img src="./assets/cw7.webp" alt="Foto da estrutura da clínica 5" />
                     </div>
                   </article>
+                  <article class="photo-slide">
+                    <div class="photo-card">
+                      <img src="./assets/cw9.webp" alt="Foto da estrutura da clínica 6" />
+                    </div>
+                  </article>
                 </div>
               </div>
 
@@ -1260,7 +1291,7 @@
             <h2 class="title">Indicado para dentistas que precisam de um espaço profissional para atender</h2>
             <div class="about-copy" style="margin-top: 28px">
               <p>
-                O coworking odontológico da Bacic Odontologia foi pensado para profissionais que já possuem pacientes próprios e buscam um local estruturado para realizar seus atendimentos com segurança, conforto e praticidade.
+                Coworking odontológico pensado para profissionais que já possuem pacientes próprios e buscam um local estruturado para realizar seus atendimentos com segurança, conforto e praticidade, quanto para recém-formados em início de carreira que buscam um espaço profissional para iniciar seus atendimentos.
               </p>
             </div>
           </div>
@@ -1342,10 +1373,6 @@
 
           <div>
             <h2 class="title">Como funciona o aluguel do espaço</h2>
-            <p class="text-lg" style="margin-top: 24px">
-              O modelo é indicado para dentistas que já possuem demanda própria e desejam atender seus pacientes em uma estrutura odontológica pronta.
-            </p>
-
             <div class="method-steps" style="margin-top: 36px">
               <div class="method-step">
                 <div class="method-step-number">01</div>
@@ -1392,52 +1419,31 @@
             <h3>Quero saber mais sobre o espaço</h3>
 
             <form id="cowork-form">
+              <div class="field">
+                <label for="nome">Nome completo</label>
+                <input id="nome" name="nome" type="text" required />
+              </div>
+
               <div class="form-row">
-                <div class="field">
-                  <label for="nome">Nome completo</label>
-                  <input id="nome" name="nome" type="text" required />
-                </div>
                 <div class="field">
                   <label for="whatsapp">WhatsApp</label>
                   <input id="whatsapp" name="whatsapp" type="tel" required />
                 </div>
-              </div>
-
-              <div class="form-row">
                 <div class="field">
                   <label for="email">E-mail</label>
                   <input id="email" name="email" type="email" required />
                 </div>
-                <div class="field">
-                  <label for="especialidade">Especialidade</label>
-                  <input id="especialidade" name="especialidade" type="text" required />
-                </div>
               </div>
 
               <div class="form-row">
                 <div class="field">
+                  <label for="especialidade">Especialidade</label>
+                  <input id="especialidade" name="especialidade" type="text" required />
+                </div>
+                <div class="field">
                   <label for="cro">CRO</label>
                   <input id="cro" name="cro" type="text" required />
                 </div>
-                <div class="field">
-                  <label for="pacientes-proprios">Você já possui pacientes próprios?</label>
-                  <select id="pacientes-proprios" name="pacientes-proprios" required>
-                    <option value="">Selecione</option>
-                    <option>Sim</option>
-                    <option>Não</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="field">
-                <label for="frequencia">Qual frequência de uso desejada?</label>
-                <select id="frequencia" name="frequencia" required>
-                  <option value="">Selecione</option>
-                  <option>Pontual</option>
-                  <option>Semanal</option>
-                  <option>Mensal</option>
-                  <option>Ainda quero entender as opções</option>
-                </select>
               </div>
 
               <div class="field">
@@ -1460,7 +1466,7 @@
           <div class="cta-panel">
             <h3>Quer atender seus pacientes em uma estrutura pronta na Consolação?</h3>
             <p>
-              Fale com a equipe da Bacic Odontologia e entenda as possibilidades de uso do coworking odontológico.
+              Fale com nossa equipe e entenda as possibilidades de uso do coworking odontológico.
             </p>
             <a
               class="btn sellbot-wpp-open js-track-whatsapp"
@@ -1644,8 +1650,6 @@
           const email = formData.get("email")?.toString().trim() || "";
           const especialidade = formData.get("especialidade")?.toString().trim() || "";
           const cro = formData.get("cro")?.toString().trim() || "";
-          const pacientesProprios = formData.get("pacientes-proprios")?.toString().trim() || "";
-          const frequencia = formData.get("frequencia")?.toString().trim() || "";
           const mensagem = formData.get("mensagem")?.toString().trim() || "";
 
           const whatsappMessage = [
@@ -1656,15 +1660,11 @@
             `E-mail: ${email}`,
             `Especialidade: ${especialidade}`,
             `CRO: ${cro}`,
-            `Você já possui pacientes próprios?: ${pacientesProprios}`,
-            `Qual frequência de uso desejada?: ${frequencia}`,
             `Mensagem: ${mensagem || "-"}`,
           ].join("\n");
 
           pushEvent("cowork_form_submit", {
             form_name: "coworking_odontologico_consolacao",
-            frequencia_uso: frequencia,
-            pacientes_proprios: pacientesProprios,
           });
 
           if (successMessage) {
